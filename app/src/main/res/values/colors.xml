@@ -1,0 +1,13 @@
+<!--?xml version="1.0" encoding="UTF-8"?-->
+<resources>
+    <color name="primaryColor">#c2185b</color>
+    <color name="primaryLightColor">#fa5788</color>
+    <color name="primaryDarkColor">#8c0032</color>
+    <color name="secondaryColor">#880e4f</color>
+    <color name="secondaryLightColor">#bc477b</color>
+    <color name="secondaryDarkColor">#560027</color>
+    <color name="primaryTextColor">#ffffff</color>
+    <color name="secondaryTextColor">#ffffff</color>
+
+    <color name="card_highlighted_color">#efefef</color>
+</resources>
