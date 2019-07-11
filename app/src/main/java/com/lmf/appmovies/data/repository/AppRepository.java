@@ -68,8 +68,8 @@ public class AppRepository {
         return movieDao.getMoviebyId(idmovie);
     }
 
-    public LiveData<List<Movie>> getListMovieLike(String condition) {
-        return movieDao.getListMovieLike(condition);
+    public LiveData<List<Movie>> getMoviesLike(String condition) {
+        return movieDao.getMoviesLike(condition);
     }
 
     public void insertMovie(ResponseMovie responseMovie) {
@@ -89,7 +89,8 @@ public class AppRepository {
                     mov.getOriginalTitle(),
                     mov.getBackdropPath(),
                     mov.getOverview(),
-                    mov.getReleaseDate())
+                    mov.getReleaseDate(),
+                    mov.getOriginalLanguage())
             );
             idmov++;
         }

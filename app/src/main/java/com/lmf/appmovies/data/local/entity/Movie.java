@@ -42,6 +42,9 @@ public class Movie {
     @NonNull
     @ColumnInfo(name = "release_date")
     private String releaseDate;
+    @NonNull
+    @ColumnInfo(name = "original_language")
+    private String originalLanguage;
 
     public Double getVoteAverage() {
         return voteAverage;
@@ -147,6 +150,13 @@ public class Movie {
         this.releaseDate = releaseDate;
     }
 
+    public String getOriginalLanguage() {
+        return originalLanguage;
+    }
+    public void setOriginalLanguage(String originalLanguage) {
+        this.originalLanguage = originalLanguage;
+    }
+
     public Movie(int idmovie,
                  int id,
                  double voteAverage,
@@ -159,7 +169,8 @@ public class Movie {
                  String originalTitle,
                  String backdropPath,
                  String overview,
-                 String releaseDate) {
+                 String releaseDate,
+                 String originalLanguage) {
         this.id = idmovie;
         this.id = id;
         this.voteAverage = voteAverage;
@@ -173,6 +184,6 @@ public class Movie {
         this.backdropPath = backdropPath;
         this.overview = overview;
         this.releaseDate = releaseDate;
+        this.originalLanguage = originalLanguage;
     }
-
 }

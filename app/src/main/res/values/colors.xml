@@ -10,4 +10,5 @@
     <color name="secondaryTextColor">#ffffff</color>
 
     <color name="card_highlighted_color">#efefef</color>
+    <color name="color_white">#FFFFFF</color>
 </resources>

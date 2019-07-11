@@ -49,14 +49,14 @@ public class AdapterMovies extends RecyclerView.Adapter<AdapterMovies.MoviesView
         Movie movie = lMovies.get(position);
 
         final int idMovie = movie.getId();
-        String url = Constans.IMAGE_PATH + movie.getBackdropPath();
-        String releaseDte = context.getString(R.string.string_release_date) +
-                movie.getReleaseDate() == null ? "-" : movie.getReleaseDate();
+        String url = Constans.IMAGE_PATH + movie.getPosterPath();
+        String releaseDte = context.getString(R.string.string_release_date, movie.getReleaseDate());
 
         Glide.with(context)
                 .load(url)
-                .diskCacheStrategy(DiskCacheStrategy.ALL)
-                .placeholder(R.drawable.circle_progress)
+                .diskCacheStrategy(DiskCacheStrategy.AUTOMATIC)
+                .thumbnail(Glide.with(context).load(R.drawable.loading_spinner))
+                .fitCenter()
                 .into(holder.img_mini);
 
         holder.tv_title_movie.setText(movie.getTitle() == null ? "-" : movie.getTitle());
@@ -87,9 +87,7 @@ public class AdapterMovies extends RecyclerView.Adapter<AdapterMovies.MoviesView
     }
 
     public void refreshAdapter(List<Movie> Movies) {
-        if (Movies.size() > 0) {
-            lMovies = Movies;
-            notifyDataSetChanged();
-        }
+        lMovies = Movies;
+        notifyDataSetChanged();
     }
 }

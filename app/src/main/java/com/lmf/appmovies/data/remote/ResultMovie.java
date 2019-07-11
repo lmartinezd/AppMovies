@@ -35,6 +35,9 @@ public class ResultMovie {
     @SerializedName("release_date")
     @Expose
     private String releaseDate;
+    @SerializedName("original_language")
+    @Expose
+    private String originalLanguage;
 
     public Double getVoteAverage() {
         return voteAverage;
@@ -132,6 +135,14 @@ public class ResultMovie {
         this.releaseDate = releaseDate;
     }
 
+    public String getOriginalLanguage() {
+        return originalLanguage;
+    }
+
+    public void setOriginalLanguage(String originalLanguage) {
+        this.originalLanguage = originalLanguage;
+    }
+
     public ResultMovie(int id,
                        double voteAverage,
                        Integer voteCount,
@@ -143,7 +154,8 @@ public class ResultMovie {
                        String originalTitle,
                        String backdropPath,
                        String overview,
-                       String releaseDate) {
+                       String releaseDate,
+                       String originalLanguage) {
         this.id = id;
         this.voteAverage = voteAverage;
         this.voteCount = voteCount;
@@ -156,6 +168,7 @@ public class ResultMovie {
         this.backdropPath = backdropPath;
         this.overview = overview;
         this.releaseDate = releaseDate;
+        this.originalLanguage = originalLanguage;
     }
 
     @Ignore()

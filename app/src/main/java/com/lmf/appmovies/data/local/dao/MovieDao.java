@@ -25,6 +25,6 @@ public interface MovieDao {
     @Query("SELECT * from tb_movie WHERE id ==  :idmovie")
     LiveData<Movie> getMoviebyId(int idmovie);
 
-    @Query("SELECT * from tb_movie WHERE title LIKE '%'||:condition||'%' ")
-    LiveData<List<Movie>> getListMovieLike(String condition);
+    @Query("SELECT * from tb_movie WHERE LOWER(title) LIKE '%'||:condition||'%' ")
+    LiveData<List<Movie>> getMoviesLike(String condition);
 }

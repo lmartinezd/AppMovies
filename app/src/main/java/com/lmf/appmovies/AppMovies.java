@@ -52,10 +52,11 @@ public class AppMovies extends Application {
         okHttpClient
                 .connectTimeout(15, TimeUnit.SECONDS)
                 .readTimeout(15, TimeUnit.SECONDS)
-                .writeTimeout(15, TimeUnit.SECONDS)
-                .addInterceptor(new HttpLoggingInterceptor().setLevel(HttpLoggingInterceptor.Level.BODY))
-                .addNetworkInterceptor(new StethoInterceptor());
-
+                .writeTimeout(15, TimeUnit.SECONDS);
+        if (BuildConfig.DEBUG) {
+            okHttpClient.addInterceptor(new HttpLoggingInterceptor().setLevel(HttpLoggingInterceptor.Level.BODY))
+                    .addNetworkInterceptor(new StethoInterceptor());
+        }
         return okHttpClient.build();
     }
 

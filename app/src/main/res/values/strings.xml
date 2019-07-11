@@ -2,9 +2,12 @@
     <string name="app_name">AppMovies</string>
     <string name="title_app">Movies</string>
     <string name="title_overview">Overview</string>
-    <string name="string_release_date">Release date: </string>
+    <string name="string_release_date">Release date: %1$s</string>
     <string name="string_search">Search</string>
     <string name="string_category_popular">Popular</string>
     <string name="string_category_toprated">Top Rated</string>
     <string name="string_category_upcoming">Upcoming</string>
+    <string name="string_language">Language</string>
+    <string name="string_date">Release date</string>
+    <string name="string_count_votes">%1$s votes</string>
 </resources>
