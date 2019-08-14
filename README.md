@@ -1,15 +1,6 @@
 # AppMovies
 Padrón de arquitectura MVVM usando Room, RxJava 2, Retrofit.
 
-# Preguntas
-<ol>
-<li>En qué consiste el principio de responsabilidad única? Cuál es su propósito?</br>
-El SRP del SOLID consiste en agrupar reglas del negocio similares en una sola clase y debe estar encapsulada. Su propósito es de tener un código ordenado de manera que sea de fácil lectura y manutención.</li>
-
-<li>Qué características tiene, según su opinión, un "buen" código o código limpio?</br>
-Usar clean code beneficia la fácil lectura y escritura de código para una buena comprensión y manutención.
-</li>
-</ol>
 
 # Librerías
 <ul> 
